@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Privacy Policy of ATLAS MEDIA: which Google user data the application accesses through the YouTube and Google Drive APIs, how it is used, stored and deleted, and how to revoke access.">
+  <title>Privacy Policy &middot; ATLAS MEDIA</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0d12'/%3E%3Cpath d='M16 6l9 18h-4l-5-10-5 10H7z' fill='%238fb0ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./">ATLAS MEDIA</a>
+      <nav aria-label="Main">
+        <a href="./">Home</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1 style="margin:0 0 6px;font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.15">Privacy Policy</h1>
+      <p class="meta">Effective and last updated: October 18, 2026</p>
+
+      <h2>1. Who we are</h2>
+      <p>ATLAS MEDIA (&ldquo;the application&rdquo;, &ldquo;we&rdquo;) is a private content-production and publishing automation tool developed and operated by an individual (&ldquo;the operator&rdquo;). It runs on the operator's own computer and is used only with the operator's own Google account and the operator's own YouTube channels. It is not offered to the public, has no public sign-up and no other users. Contact: <a href="mailto:cryso369@gmail.com">cryso369@gmail.com</a>.</p>
+
+      <h2>2. Google user data the application accesses</h2>
+      <p>The application accesses Google user data only after the account owner grants permission on Google's consent screen, and only through the YouTube Data API (v3) and the Google Drive API (v3). It requests exactly these OAuth scopes:</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Scope</th><th>What the application does with it</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><code>https://www.googleapis.com/auth/youtube.upload</code></td>
+              <td>Uploads finished videos, with their title, description, tags, category and language, to the authorised channel (by default with <strong>private</strong> visibility), and sets the video's thumbnail.</td>
+            </tr>
+            <tr>
+              <td><code>https://www.googleapis.com/auth/youtube.readonly</code></td>
+              <td>Reads the authorised channel's identifier and title, so that uploads go only to the intended channel; reads the channel's upload-eligibility status; reads the metadata and status of a video the application uploaded (title, description, visibility, whether a thumbnail is set) to verify the upload; and reads the channel's most recent uploads (at most 50 entries: video ID, title, publish time, visibility) to detect an upload that may already exist before trying again, so that the same video is never uploaded twice.</td>
+            </tr>
+            <tr>
+              <td><code>https://www.googleapis.com/auth/drive.file</code></td>
+              <td>Creates an archive folder structure and uploads backup copies of finished videos and related production files into it; reads back the name, size and checksum of files the application itself created in order to confirm each copy is complete; and reads the account's total and used storage quota to check that there is room. This scope gives access <em>only</em> to files and folders created by the application &mdash; it cannot see, read or change any other file in the account.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The application does not access email, contacts, calendar, photos, other Drive files, or any other Google service. It does not read comments, subscribers, analytics or revenue data. It does not edit or delete existing videos and does not delete anything from Google Drive.</p>
+
+      <h2>3. How the data is used</h2>
+      <p>Google user data is used only to provide the features described above: publishing the operator's own videos to the operator's own channels and keeping verified backup copies in the operator's own Drive. It is not used for advertising, profiling, analytics, machine-learning training or any other purpose, and it is not sold.</p>
+
+      <h2>4. What is stored, where, and for how long</h2>
+      <ul>
+        <li><strong>OAuth credentials.</strong> After the account owner approves access, Google issues a refresh token (and short-lived access tokens). They are kept in a local file on the operator's computer, written so that only the operator's computer user account can read it, and excluded from the project's version control. They are used only to call the APIs listed above and are never printed or sent anywhere except to Google. They are kept until the operator deletes the file or re-authorises, which replaces them. Google may also expire or revoke them on its own.</li>
+        <li><strong>Local publishing records.</strong> To avoid duplicate uploads and to keep an audit trail, the application stores on the same computer: the video ID and URL, the channel identifier and title, upload and verification timestamps and the chosen visibility. For the Drive backup it stores the IDs, names, sizes and checksums of the files it created. These records are kept for as long as the operator keeps the project's files; they are not deleted automatically.</li>
+        <li><strong>Content in Google's services.</strong> Uploaded videos remain in the YouTube channel and backup copies remain in the Drive folder until the account owner deletes them in YouTube Studio or Google Drive. The application never deletes them.</li>
+        <li><strong>No server of our own.</strong> The application has no web server, database or cloud back end that receives Google user data. Data travels only between the operator's computer and Google, over the encrypted connections the official Google client library uses.</li>
+      </ul>
+
+      <h2>5. Sharing and transfer</h2>
+      <p>We do not share, sell, rent or transfer Google user data to anyone, and no person other than the operator reads it. The application also uses unrelated services to produce content (for example text-to-speech and image generation); those services receive only the operator's own scripts and image descriptions, never Google credentials or data obtained through Google APIs.</p>
+
+      <h2>6. Google API Services User Data Policy</h2>
+      <p>The use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+      <h2 id="revoke">7. Revoking access and deleting data</h2>
+      <ul>
+        <li><strong>Revoke from your Google account (immediate).</strong> Open <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>, choose ATLAS MEDIA and select &ldquo;Delete all connections&rdquo; / &ldquo;Remove access&rdquo;. The application's tokens stop working at once and it can no longer reach the account. The application does not need to be running for this to take effect.</li>
+        <li><strong>Delete the local credentials.</strong> Deleting the token files on the operator's computer removes the application's stored access; the application then cannot call the APIs until the account owner approves it again.</li>
+        <li><strong>Delete the data it created.</strong> Videos can be deleted in YouTube Studio and the archive folder in Google Drive. Local publishing records can be deleted by deleting the project's state files.</li>
+        <li><strong>Ask us.</strong> You may also write to <a href="mailto:cryso369@gmail.com">cryso369@gmail.com</a> to ask what is held about you or to request deletion.</li>
+      </ul>
+
+      <h2>8. This website</h2>
+      <p>This website is a static page hosted on GitHub Pages. It sets no cookies, loads no third-party scripts, fonts or trackers and has no forms. As with any web host, GitHub may process technical request data such as IP addresses under its own privacy statement; we receive none of it.</p>
+
+      <h2>9. Security</h2>
+      <p>We take reasonable care of the data described above: credentials are stored in an access-restricted local file and kept out of version control, and the least-privilege Drive scope (<code>drive.file</code>) is used instead of full Drive access. We cannot guarantee absolute security, and this policy makes no claim of any external certification or audit.</p>
+
+      <h2>10. Children</h2>
+      <p>The application is not directed to children and does not knowingly process children's data.</p>
+
+      <h2>11. Changes to this policy</h2>
+      <p>If the application's use of Google data changes, this page will be updated before the change takes effect, and the date above will change.</p>
+
+      <h2>12. Contact</h2>
+      <p>ATLAS MEDIA &middot; <a href="mailto:cryso369@gmail.com">cryso369@gmail.com</a> &middot; <a href="./">Home</a></p>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>&copy; 2026 ATLAS MEDIA &middot; <a href="./">Home</a> &middot; <a href="mailto:cryso369@gmail.com">Contact</a></p>
+      <p>ATLAS MEDIA is an independent project. It is not affiliated with, sponsored by or endorsed by Google or YouTube. YouTube and Google Drive are trademarks of Google LLC.</p>
+    </div>
+  </footer>
+</body>
+</html>
